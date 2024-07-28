@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page with Logos and Buttons</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
+</head>
+<body class="bg-dark text-white">
+
+    <header class="bg-secondary p-3 d-flex justify-content-between align-items-center fixed-top w-100">
+        <img src="logo-top-left.png" alt="Top Left Logo" class="logo-top-left">
+        <nav class="d-flex align-items-center">
+            <div class="me-3">
+                <a href="mailto:example@example.com" class="text-white me-2"><img src="icons/mail.png" alt="Mail" class="icon"></a>
+                <a href="https://twitter.com/example" class="text-white me-2"><img src="icons/twitter.png" alt="Twitter" class="icon"></a>
+                <a href="https://instagram.com/example" class="text-white me-2"><img src="icons/instagram.png" alt="Instagram" class="icon"></a>
+                <a href="https://youtube.com/example" class="text-white me-2"><img src="icons/youtube.png" alt="YouTube" class="icon"></a>
+                <a href="https://twitch.tv/example" class="text-white me-2"><img src="icons/twitch.png" alt="Twitch" class="icon"></a>
+                <a href="https://tiktok.com/@example" class="text-white me-2"><img src="icons/tiktok.png" alt="TikTok" class="icon"></a>
+                <a href="https://threads.net/example" class="text-white me-2"><img src="icons/threads.png" alt="Threads" class="icon"></a>
+                <a href="https://ko-fi.com/example" class="text-white me-2"><img src="icons/kofi.png" alt="Ko-fi" class="icon"></a>
+            </div>
+            <div>
+                <a href="home.html" class="nav-link text-white">Home</a>
+                <a href="projects.html" class="nav-link text-white">Projects</a>
+                <a href="support.html" class="nav-link text-white">Support</a>
+                <a href="contact.html" class="nav-link text-white">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mt-5 pt-5">
+        <div class="container text-center">
+            <div class="logo-text mb-4">
+                <img src="logo-top-center.png" alt="Top Center Logo" class="img-fluid" style="max-width: 200px;">
+                <p class="fs-2">METAL KITTENS</p>
+            </div>
+            <div class="button-container mb-4">
+                <button class="btn btn-custom">Our Aim</button>
+                <button class="btn btn-custom">Finished Projects</button>
+                <button class="btn btn-custom">Top Contributors</button>
+                <button class="btn btn-custom">Support Us</button>
+                <button class="btn btn-custom">Contact</button>
+            </div>
+            <div class="social-media">
+                <a href="mailto:example@example.com" class="me-2"><img src="icons/mail.png" alt="Mail" class="icon"></a>
+                <a href="https://twitter.com/example" class="me-2"><img src="icons/twitter.png" alt="Twitter" class="icon"></a>
+                <a href="https://instagram.com/example" class="me-2"><img src="icons/instagram.png" alt="Instagram" class="icon"></a>
+                <a href="https://youtube.com/example" class="me-2"><img src="icons/youtube.png" alt="YouTube" class="icon"></a>
+                <a href="https://twitch.tv/example" class="me-2"><img src="icons/twitch.png" alt="Twitch" class="icon"></a>
+                <a href="https://tiktok.com/@example" class="me-2"><img src="icons/tiktok.png" alt="TikTok" class="icon"></a>
+                <a href="https://threads.net/example" class="me-2"><img src="icons/threads.png" alt="Threads" class="icon"></a>
+                <a href="https://ko-fi.com/example" class="me-2"><img src="icons/kofi.png" alt="Ko-fi" class="icon"></a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // JavaScript to add 'active' class to the current page link
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
