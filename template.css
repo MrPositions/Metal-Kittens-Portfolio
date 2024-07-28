@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    background-color: #1c1c1c; /* Dark grayish background color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Content Styles */
+.header-content {
+    background-color: #1c1c1c; /* Match background color of the main content */
+    color: #fff;
+    padding: 15px 30px; /* Adjust padding for header */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    position: relative; /* Positioned relative to flow in the main content */
+}
+
+/* Header Logo Styles */
+.header-logo {
+    margin-right: auto; /* Pushes the logo to the far left */
+}
+
+.header-logo img {
+    height: 170px; /* Adjust size as needed */
+}
+
+/* Header Navigation Styles */
+.header-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px; /* Space between the navigation and icons */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px; /* Adjust spacing between nav buttons */
+    position: relative; /* For underline positioning */
+}
+
+.header-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Decreased font size */
+    padding: 12px 20px; /* Increased padding */
+    transition: color 0.3s; /* Transition for text color */
+    position: relative; /* For underline positioning */
+}
+
+.header-nav .nav-link.active {
+    color: #f0f0f0; /* Light color for text on active link */
+}
+
+.header-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Positioning the underline below text */
+    height: 2px;
+    width: 0;
+    background-color: #f0f0f0; /* Underline color */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.header-nav .nav-link.active::after,
+.header-nav .nav-link:hover::after {
+    width: 100%; /* Underline width on hover and active */
+}
+
+/* Header Top Icons Styles */
+.header-top-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+}
+
+.header-top-icons .header-icon {
+    color: #fff; /* Icon color */
+    font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Transition for icon color */
+}
+
+.header-top-icons .header-icon:hover {
+    color: #f0f0f0; /* Icon color on hover */
+}
+
+.header-top-icons .header-icon-img {
+    width: 32px; /* Adjust size for image icons */
+    height: 18px; /* Adjust size for image icons */
+    transition: opacity 0.3s; /* Transition for image opacity */
+}
+
+.header-top-icons .header-icon-img:hover {
+    opacity: 0.8; /* Image opacity on hover */
+}
+
+/* Main Content Styles */
+main {
+    background-color: #1c1c1c; /* Dark grayish background for main content */
+    color: #fff; /* White text color for contrast */
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
+    padding: 20px; /* Adjust padding for content */
+    margin: 0 auto; /* Center main content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Logo Text Styles */
+.logo-text img {
+    max-width: 400px; /* Adjust size as needed */
+}
+
+/* Social Buttons Styles */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    margin-top: 30px; /* Space above the social buttons */
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-color: #f0f0f0; /* Background color for the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.25s, transform 0.25s; /* Transition for background color and scale */
+    border: none;
+    text-align: center;
+}
+
+.social-icon img {
+    width: 48px; /* Adjust image size */
+    height: 48px; /* Adjust image size */
+    transition: filter 0.25s; /* Transition for filter effect */
+}
+
+.social-icon i {
+    font-size: 24px; /* Font Awesome icon size */
+    color: #000; /* Icon color */
+}
+
+.social-icon:hover {
+    background-color: #000; /* Full black background on hover */
+    transform: scale(1.1); /* Slightly scale up the button on hover */
+}
+
+.social-icon:hover i {
+    color: #fff; /* Icon color on hover */
+}
