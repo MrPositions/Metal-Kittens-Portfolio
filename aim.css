@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    background-color: #1c1c1c; /* Dark grayish background color */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Content Styles */
+.header-content {
+    background-color: #1c1c1c; /* Match background color of the main content */
+    color: #fff;
+    padding: 15px 30px; /* Adjust padding for header */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Space between logo and other elements */
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Header Logo Styles */
+.header-logo {
+    flex: 1;
+}
+
+.header-logo img {
+    height: 120px; /* Adjust size for smaller screens */
+    max-width: 100%; /* Ensure logo doesn't overflow */
+}
+
+/* Header Navigation Styles */
+.header-nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    align-items: center;
+    justify-content: space-between; /* Space between elements */
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px; /* Adjust spacing between nav buttons */
+}
+
+/* Header Nav Links */
+.header-nav .nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px; /* Increased font size */
+    padding: 12px; /* Increased padding */
+    position: relative; /* For underline positioning */
+    transition: color 0.3s; /* Transition for text color */
+    margin-right: 15px; /* Slightly move links towards the right on desktop */
+}
+
+/* Navigation Underline */
+.header-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Positioning the underline below text */
+    height: 2px;
+    width: 0;
+    background-color: #f0f0f0; /* Underline color */
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.header-nav .nav-link.active::after,
+.header-nav .nav-link:hover::after {
+    width: 100%; /* Underline width on hover or active */
+    background-color: #ffffff; /* White underline on hover */
+}
+
+/* Header Top Icons */
+.header-top-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.header-top-icons .header-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.header-top-icons .header-icon:hover {
+    color: #f0f0f0; /* Icon hover color */
+}
+
+.header-icon-img {
+    width: 32px; /* Adjust icon image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Mobile Menu Styles */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Mobile Navigation Styles */
+.navbar-nav {
+    background-color: #1c1c1c; /* Background color for mobile menu */
+    width: 100%;
+}
+
+.navbar-nav .nav-item {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #333; /* Separator for items */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Aim Section Styles */
+.aim-section {
+    margin-top: 20px;
+    text-align: center; /* Center the heading and paragraph */
+}
+
+/* Aim Heading Styles */
+.aim-heading {
+    font-family: 'Julius Sans One', sans-serif; /* Use Julius Sans One font */
+    font-size: 36px; /* Size of the heading */
+    color: #fff; /* Heading color */
+    border-bottom: 2px solid #fff; /* Underline for the heading */
+    display: inline-block; /* To keep the underline width consistent */
+    padding-bottom: 10px; /* Space between heading text and underline */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Aim Paragraph Styles */
+.aim-paragraph {
+    color: #ccc; /* Light gray color for the paragraph */
+    font-size: 18px; /* Size of the paragraph text */
+    line-height: 1.6; /* Line height for better readability */
+    max-width: 800px; /* Maximum width for the paragraph */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Social Buttons Styles */
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between social icons */
+}
+
+.social-buttons .social-icon {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-buttons .social-icon:hover {
+    color: #f0f0f0; /* Social icon hover color */
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .header-logo img {
+        height: 100px; /* Smaller logo for mobile */
+    }
+
+    .nav-buttons {
+        display: none; /* Hide navigation buttons on mobile */
+    }
+
+    .navbar-nav {
+        padding: 0;
+    }
+
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid #333; /* Border between items */
+    }
+
+    .btn-custom {
+        width: 100%;
+        margin-bottom: 10px; /* Space between buttons on mobile */
+    }
+
+    .header-top-icons {
+        display: none; /* Hide top icons on mobile */
+    }
+
+    .social-buttons {
+        flex-direction: column; /* Stack social icons vertically */
+    }
+
+    .social-buttons .social-icon {
+        font-size: 24px; /* Larger social icon size for mobile */
+    }
+
+    /* Aim Section Adjustments for Mobile */
+    .aim-section {
+        margin-top: 10px; /* Reduce margin on mobile */
+    }
+
+    .aim-heading {
+        font-size: 28px; /* Smaller heading size for mobile */
+    }
+
+    .aim-paragraph {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+}
