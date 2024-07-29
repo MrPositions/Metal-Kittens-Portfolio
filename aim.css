@@ -97,6 +97,7 @@ body {
 /* Custom styles to ensure hamburger icon visibility */
 .navbar-toggler {
     border: none;
+    background: transparent; /* Ensure background is transparent */
 }
 
 .navbar-toggler-icon {
