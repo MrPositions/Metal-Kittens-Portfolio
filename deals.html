@@ -12,6 +12,47 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+/* Pricing Table Styles */
+#packages {
+    background-color: #1c1c1c; /* Background color */
+    color: #fff;
+    padding: 60px 0;
+}
+
+#packages h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#packages .list-unstyled {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    color: #333; /* Text color inside pricing tables */
+}
+
+#packages .bg-dark {
+    background-color: #333;
+    color: #fff;
+}
+
+#packages .bg-light {
+    background-color: #f8f9fa;
+}
+
+#packages .btn-light {
+    background-color: #fff;
+    color: #333;
+    border-color: #ccc;
+}
+
+#packages .btn-light:hover {
+    background-color: #e2e6ea;
+    color: #333;
+}
+
+    </style>
 </head>
 <body>
     <header>
@@ -80,6 +121,51 @@
     </header>
     <main>
         <!-- Main content area without buttons -->
+
+        <!-- Grid for pricing tables -->
+        <div class="container text-center my-5" id="packages">
+            <h2 class="text-light-grey">Web Packages</h2>
+            <hr style="width:200px" class="opacity-50">
+            <p></p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <ul class="list-unstyled bg-white text-center border border-light">
+                        <li class="bg-dark text-light py-4">
+                            <h2 class="h4 mb-0">Basic</h2>
+                        </li>
+                        <li class="py-4">Three Pages</li>
+                        <li class="py-4">Standard Design</li>
+                        <li class="py-4">Minimal Functionality</li>
+                        <li class="py-4">Basic Instructions</li>
+                        <li class="py-4">
+                            <h2>$3</h2>
+                            <span class="text-muted">per page</span>
+                        </li>
+                        <li class="bg-light py-4">
+                            <a href="YOUR_PAYONEER_DONATION_LINK" class="btn btn-light btn-lg">Total $9</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled bg-white text-center border border-light">
+                        <li class="bg-dark text-light py-4">
+                            <h2 class="h4 mb-0">Pro</h2>
+                        </li>
+                        <li class="py-4">Three Pages</li>
+                        <li class="py-4">Quality Design</li>
+                        <li class="py-4">Complete Functionality</li>
+                        <li class="py-4">Descriptive User Guidelines</li>
+                        <li class="py-4">
+                            <h2>$5</h2>
+                            <span class="text-muted">per page</span>
+                        </li>
+                        <li class="bg-light py-4">
+                            <a href="YOUR_PAYONEER_DONATION_LINK" class="btn btn-light btn-lg">Total $15</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="container text-center">
             <!-- Social Buttons -->
             <div class="social-buttons">
