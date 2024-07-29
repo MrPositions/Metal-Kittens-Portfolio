@@ -12,6 +12,7 @@ body {
     color: #fff;
     padding: 15px 30px; /* Adjust padding for header */
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
     align-items: center;
     width: 100%;
     top: 0;
@@ -25,27 +26,30 @@ body {
 }
 
 .header-logo img {
-    height: 170px; /* Adjust size as needed */
+    height: 120px; /* Adjust size for smaller screens */
+    max-width: 100%; /* Ensure logo doesn't overflow */
 }
 
 /* Header Navigation Styles */
 .header-nav {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
     align-items: center;
     margin-right: 30px; /* Space between the navigation and icons */
 }
 
 .nav-buttons {
     display: flex;
-    gap: 20px; /* Adjust spacing between nav buttons */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 10px; /* Adjust spacing between nav buttons */
     position: relative; /* For underline positioning */
 }
 
 .header-nav .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 16px; /* Decreased font size */
-    padding: 12px 20px; /* Increased padding */
+    font-size: 14px; /* Decreased font size for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
     position: relative; /* For underline positioning */
     transition: color 0.3s; /* Transition for text color */
 }
@@ -69,23 +73,20 @@ body {
 /* Header Top Icons Styles */
 .header-top-icons {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
     align-items: center;
-    gap: 15px; /* Space between icons */
+    gap: 10px; /* Space between icons */
 }
 
 .header-top-icons .header-icon {
     color: #fff; /* Icon color */
-    font-size: 24px; /* Icon size */
+    font-size: 20px; /* Icon size for smaller screens */
     transition: color 0.3s; /* Transition for icon color */
 }
 
-.header-top-icons .header-icon:hover {
-    color: #f0f0f0; /* Icon color on hover */
-}
-
 .header-top-icons .header-icon-img {
-    width: 32px; /* Adjust size for image icons */
-    height: 18px; /* Adjust size for image icons */
+    width: 24px; /* Adjust size for image icons on smaller screens */
+    height: 14px; /* Adjust size for image icons on smaller screens */
     transition: opacity 0.3s; /* Transition for image opacity */
 }
 
@@ -98,7 +99,6 @@ main {
     background-color: #1c1c1c; /* Dark grayish background for main content */
     color: #fff; /* White text color for contrast */
     width: 100%;
-    max-width: 1200px; /* Adjust max-width as needed */
     padding: 20px; /* Adjust padding for content */
     margin: 0 auto; /* Center main content horizontally */
     display: flex;
@@ -109,7 +109,8 @@ main {
 
 /* Logo Text Styles */
 .logo-text img {
-    max-width: 400px; /* Adjust size as needed */
+    max-width: 300px; /* Adjust size for smaller screens */
+    width: 100%; /* Ensure image scales with container */
 }
 
 /* Button Styles */
@@ -117,14 +118,14 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Increased gap between buttons */
+    gap: 15px; /* Adjust gap between buttons */
 }
 
 .btn-custom {
     background-color: #f0f0f0; /* Close to white background */
     color: #000; /* Black text color */
-    font-size: 22px; /* Increased font size */
-    padding: 20px 40px; /* Increased padding */
+    font-size: 18px; /* Adjust font size for smaller screens */
+    padding: 15px 30px; /* Adjust padding for smaller screens */
     border: none;
     border-radius: 8px; /* Increased border-radius */
     transition: background-color 0.25s, color 0.25s; /* Transition for background color and text color */
@@ -138,6 +139,7 @@ main {
 /* Social Buttons Styles */
 .social-buttons {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
     justify-content: center;
     gap: 10px; /* Space between buttons */
     margin-top: 30px; /* Space above the social buttons */
@@ -147,8 +149,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    width: 40px; /* Adjust size for smaller screens */
+    height: 40px; /* Adjust size for smaller screens */
     background-color: #f0f0f0; /* Background color for the button */
     border-radius: 5px; /* Rounded corners */
     transition: background-color 0.25s, transform 0.25s; /* Transition for background color and scale */
@@ -157,13 +159,13 @@ main {
 }
 
 .social-icon img {
-    width: 48px; /* Adjust image size */
-    height: 48px; /* Adjust image size */
+    width: 40px; /* Adjust image size */
+    height: 40px; /* Adjust image size */
     transition: filter 0.25s; /* Transition for filter effect */
 }
 
 .social-icon i {
-    font-size: 24px; /* Font Awesome icon size */
+    font-size: 20px; /* Font Awesome icon size for smaller screens */
     color: #000; /* Icon color */
 }
 
@@ -174,4 +176,43 @@ main {
 
 .social-icon:hover i {
     color: #fff; /* Icon color on hover */
+}
+
+/* Media Queries for Mobile Screens */
+@media (max-width: 767px) {
+    .header-content {
+        flex-direction: column; /* Stack logo and navigation vertically */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .header-nav {
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .nav-buttons {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+
+    .header-top-icons {
+        flex-direction: column; /* Stack icons vertically */
+    }
+
+    .header-top-icons .header-icon-img {
+        width: 24px; /* Adjust image size for mobile */
+        height: 14px; /* Adjust image size for mobile */
+    }
+
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .btn-custom {
+        font-size: 18px; /* Adjust font size for mobile */
+        padding: 15px 30px; /* Adjust padding for mobile */
+    }
+
+    .social-icon {
+        width: 40px; /* Adjust size for smaller screens */
+        height: 40px; /* Adjust size for smaller screens */
+    }
 }
