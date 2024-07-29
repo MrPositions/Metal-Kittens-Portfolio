@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
+    <header>
         <div class="header-content d-flex align-items-center">
             <div class="header-logo">
                 <img src="images/Logomain3.png" alt="Top Left Logo">
             </div>
             <nav class="header-nav d-flex align-items-center">
-                <div class="nav-buttons">
+                <div class="nav-buttons d-none d-lg-flex">
                     <a href="home.html" class="nav-link">Home</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="deals.html" class="nav-link">Deals</a>
@@ -28,10 +28,37 @@
                     <a href="contact.html" class="nav-link">Contact</a>
                     <a href="aim.html" class="nav-link">Mission</a>
                 </div>
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Mobile Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="deals.html">Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aim.html">Mission</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
-            <div class="header-top-icons">
+            <div class="header-top-icons d-none d-lg-flex">
                 <a href="mailto:example@example.com" class="header-icon">
-                    <i class="fas fa-envelope"></i> <!-- Mail icon -->
+                    <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="header-icon">
                     <img src="images/Fiverr1.png" alt="Fiverr" class="header-icon-img">
@@ -40,28 +67,18 @@
                     <img src="images/Upwork1.png" alt="Upwork" class="header-icon-img">
                 </a>
                 <a href="https://youtube.com/example" class="header-icon">
-                    <i class="fab fa-youtube"></i> <!-- YouTube icon -->
+                    <i class="fab fa-youtube"></i>
                 </a>
                 <a href="https://instagram.com/example" class="header-icon">
-                    <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://twitter.com/example" class="header-icon">
-                    <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <!-- Hamburger Menu -->
-            <div class="hamburger-menu" onclick="toggleMobileNav()">
-                <i class="fas fa-bars"></i> <!-- Hamburger icon -->
-            </div>
-            <div class="mobile-nav" id="mobileNav">
-                <a href="home.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="deals.html">Deals</a>
-                <a href="support.html">Support</a>
-                <a href="contact.html">Contact</a>
-                <a href="aim.html">Mission</a>
-            </div>
         </div>
+    </header>
+    <main>
         <div class="container text-center">
             <div class="logo-text">
                 <img src="images/Logomain3.png" alt="Top Center Logo">
@@ -75,22 +92,22 @@
             </div>
             <div class="social-buttons">
                 <a href="mailto:example@example.com" class="social-icon">
-                    <i class="fas fa-envelope"></i> <!-- Mail icon -->
+                    <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="social-icon">
-                    <img src="images/Fiverr.png" alt="Fiverr" style="width:48px;height:48px;">
+                    <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
                 </a>
                 <a href="https://upwork.com/example" class="social-icon">
-                    <img src="images/Upwork.png" alt="Upwork" style="width:48px;height:48px;">
+                    <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
                 </a>
                 <a href="https://youtube.com/example" class="social-icon">
-                    <i class="fab fa-youtube"></i> <!-- YouTube icon -->
+                    <i class="fab fa-youtube"></i>
                 </a>
                 <a href="https://instagram.com/example" class="social-icon">
-                    <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://twitter.com/example" class="social-icon">
-                    <i class="fab fa-twitter"></i> <!-- Twitter icon -->
+                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
         </div>
@@ -98,7 +115,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Custom JS for setting active nav link and mobile nav toggle -->
+        <!-- Custom JS for setting active nav link -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 const currentPage = window.location.pathname.split("/").pop();
@@ -108,15 +125,6 @@
                     }
                 });
             });
-
-            function toggleMobileNav() {
-                const mobileNav = document.getElementById('mobileNav');
-                if (mobileNav.style.display === 'flex') {
-                    mobileNav.style.display = 'none';
-                } else {
-                    mobileNav.style.display = 'flex';
-                }
-            }
         </script>
     </body>
-    </html>
+</html>
