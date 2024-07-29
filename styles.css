@@ -156,6 +156,7 @@ body {
 
     .logo-text img {
         max-width: 100%; /* Ensure logo fits within the container */
+        height: auto; /* Maintain aspect ratio */
     }
 
     .button-container {
