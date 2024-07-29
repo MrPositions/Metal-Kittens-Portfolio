@@ -12,11 +12,21 @@ body {
     color: #fff;
     padding: 15px 30px; /* Adjust padding for header */
     display: flex;
-    align-items: center;
+    align-items: center; /* Center vertically */
     justify-content: space-between; /* Space between logo and other elements */
     width: 100%;
     z-index: 1000; /* Ensure it appears above other content */
     flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+/* Header Logo Styles */
+.header-logo {
+    flex: 1;
+}
+
+.header-logo img {
+    height: 120px; /* Adjust size for smaller screens */
+    max-width: 100%; /* Ensure logo doesn't overflow */
 }
 
 /* Header Navigation Styles */
@@ -24,8 +34,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
     align-items: center;
-    justify-content: flex-end; /* Align navigation to the right */
-    flex-grow: 1; /* Allow navigation to take up remaining space */
+    justify-content: space-between; /* Space between elements */
 }
 
 /* Navigation Buttons */
@@ -43,6 +52,7 @@ body {
     padding: 12px; /* Increased padding */
     position: relative; /* For underline positioning */
     transition: color 0.3s; /* Transition for text color */
+    margin-right: 15px; /* Slightly move links towards the right on desktop */
 }
 
 /* Navigation Underline */
@@ -66,16 +76,41 @@ body {
 .header-top-icons {
     display: flex;
     gap: 10px; /* Space between icons */
+    margin-left: auto; /* Move icons to the right */
+}
+
+.header-top-icons .header-icon {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.header-top-icons .header-icon-img {
+    width: 32px;
+    height: 18px;
+}
+
+/* Hamburger Menu Styles */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'/%3e%3c/svg%3e");
+}
+
+/* Mobile Navigation Styles */
+.navbar-nav {
+    text-align: center; /* Center text in mobile menu */
+}
+
+.navbar-nav .nav-item {
+    padding: 10px 0;
 }
 
 /* Social Icons Styles */
 .social-buttons {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: center; /* Center social icons horizontally */
     margin-top: 20px;
 }
-
 
 .social-buttons .social-icon {
     color: #fff;
@@ -110,7 +145,7 @@ body {
 @media (max-width: 767px) {
     .header-content {
         flex-direction: column; /* Stack elements vertically on mobile */
-        align-items: flex-start; /* Align items to the left */
+        align-items: center; /* Center items horizontally */
     }
 
     .header-logo img {
@@ -132,8 +167,8 @@ body {
 
     .button-container {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping of buttons */
-        justify-content: center;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons horizontally */
         gap: 10px; /* Spacing between buttons */
     }
 
