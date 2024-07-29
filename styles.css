@@ -26,7 +26,7 @@ body {
 }
 
 .header-logo img {
-    height: 120px; /* Adjust size for smaller screens */
+    height: 120px; /* Original size */
     max-width: 100%; /* Ensure logo doesn't overflow */
 }
 
@@ -48,8 +48,8 @@ body {
 .header-nav .nav-link {
     color: #fff;
     text-decoration: none;
-    font-size: 16px; /* Increased font size */
-    padding: 12px; /* Increased padding */
+    font-size: 16px; /* Original font size */
+    padding: 12px; /* Original padding */
     position: relative; /* For underline positioning */
     transition: color 0.3s; /* Transition for text color */
 }
@@ -80,13 +80,13 @@ body {
 
 .header-top-icons .header-icon {
     color: #fff; /* Icon color */
-    font-size: 24px; /* Increased icon size */
+    font-size: 24px; /* Original icon size */
     transition: color 0.3s; /* Transition for icon color */
 }
 
 .header-top-icons .header-icon-img {
-    width: 32px; /* Adjust size for image icons */
-    height: 32px; /* Adjust size for image icons */
+    width: 32px; /* Original size for image icons */
+    height: 18px; /* Original size for image icons */
     transition: opacity 0.3s; /* Transition for image opacity */
 }
 
@@ -99,7 +99,7 @@ main {
     background-color: #1c1c1c; /* Dark grayish background for main content */
     color: #fff; /* White text color for contrast */
     width: 100%;
-    padding: 20px; /* Adjust padding for content */
+    padding: 20px; /* Original padding for content */
     margin: 0 auto; /* Center main content horizontally */
     display: flex;
     flex-direction: column;
@@ -109,7 +109,7 @@ main {
 
 /* Logo Text Styles */
 .logo-text img {
-    max-width: 360px; /* Adjust size for larger screens */
+    max-width: 360px; /* Original size */
     width: 100%; /* Ensure image scales with container */
 }
 
@@ -118,16 +118,16 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Increased gap between buttons */
+    gap: 20px; /* Original gap between buttons */
 }
 
 .btn-custom {
     background-color: #f0f0f0; /* Close to white background */
     color: #000; /* Black text color */
-    font-size: 22px; /* Increased font size */
-    padding: 20px 40px; /* Increased padding */
+    font-size: 22px; /* Original font size */
+    padding: 20px 40px; /* Original padding */
     border: none;
-    border-radius: 8px; /* Increased border-radius */
+    border-radius: 8px; /* Original border-radius */
     transition: background-color 0.25s, color 0.25s; /* Transition for background color and text color */
 }
 
@@ -141,31 +141,31 @@ main {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
     justify-content: center;
-    gap: 15px; /* Space between buttons */
-    margin-top: 30px; /* Space above the social buttons */
+    gap: 15px; /* Original space between buttons */
+    margin-top: 30px; /* Original space above the social buttons */
 }
 
 .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px; /* Adjust size for larger screens */
-    height: 48px; /* Adjust size for larger screens */
+    width: 48px; /* Original size */
+    height: 48px; /* Original size */
     background-color: #f0f0f0; /* Background color for the button */
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; /* Original rounded corners */
     transition: background-color 0.25s, transform 0.25s; /* Transition for background color and scale */
     border: none;
     text-align: center;
 }
 
 .social-icon img {
-    width: 48px; /* Adjust image size */
-    height: 48px; /* Adjust image size */
+    width: 48px; /* Original image size */
+    height: 48px; /* Original image size */
     transition: filter 0.25s; /* Transition for filter effect */
 }
 
 .social-icon i {
-    font-size: 24px; /* Increased Font Awesome icon size */
+    font-size: 24px; /* Original Font Awesome icon size */
     color: #000; /* Icon color */
 }
 
@@ -200,16 +200,16 @@ main {
     .header-top-icons {
         display: flex;
         justify-content: center;
-        gap: 10px; /* Space between icons */
+        gap: 10px; /* Original space between icons */
     }
 
     .header-top-icons .header-icon {
-        font-size: 24px; /* Increased icon size for mobile */
+        font-size: 24px; /* Original icon size for mobile */
     }
 
     .header-top-icons .header-icon-img {
-        width: 32px; /* Adjust size for mobile */
-        height: 32px; /* Adjust size for mobile */
+        width: 32px; /* Original size for mobile */
+        height: 32px; /* Original size for mobile */
     }
 
     .button-container {
@@ -217,19 +217,19 @@ main {
     }
 
     .btn-custom {
-        font-size: 20px; /* Adjust font size for mobile */
-        padding: 15px 30px; /* Adjust padding for mobile */
+        font-size: 20px; /* Original font size for mobile */
+        padding: 15px 30px; /* Original padding for mobile */
     }
 
     .social-icon {
-        width: 48px; /* Adjust size for mobile */
-        height: 48px; /* Adjust size for mobile */
+        width: 48px; /* Original size for mobile */
+        height: 48px; /* Original size for mobile */
     }
 
     /* Hamburger Menu Styles */
     .hamburger-menu {
         display: block; /* Show hamburger menu on mobile */
-        font-size: 24px;
+        font-size: 24px; /* Original size */
         color: #fff;
         cursor: pointer;
         position: absolute;
@@ -259,7 +259,7 @@ main {
         color: #fff;
         text-decoration: none;
         padding: 10px;
-        font-size: 18px;
+        font-size: 18px; /* Original size for mobile */
         text-align: center;
         display: block;
     }
