@@ -168,9 +168,19 @@ body {
 
     .button-container {
         display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons horizontally */
+        flex-wrap: wrap; /* Allow buttons to wrap */
         gap: 10px; /* Spacing between buttons */
+        justify-content: center; /* Center buttons horizontally */
+    }
+
+    .button-container .btn-custom {
+        flex: 1 1 calc(50% - 20px); /* 2 buttons per row */
+    }
+
+    .button-container .btn-custom:nth-child(3),
+    .button-container .btn-custom:nth-child(4),
+    .button-container .btn-custom:nth-child(5) {
+        flex: 1 1 calc(33.33% - 20px); /* 3 buttons per row */
     }
 
     .social-buttons {
