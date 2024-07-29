@@ -146,6 +146,7 @@ body {
     .header-content {
         flex-direction: column; /* Stack elements vertically on mobile */
         align-items: center; /* Center items horizontally */
+        padding: 10px; /* Adjust padding for mobile */
     }
 
     .header-logo img {
@@ -174,5 +175,11 @@ body {
 
     .social-buttons {
         margin-top: 10px; /* Reduce margin for mobile */
+    }
+
+    /* Additional Styling for Mobile */
+    .btn-custom {
+        padding: 12px 24px; /* Larger buttons for better touch experience */
+        font-size: 18px; /* Larger font size for better readability */
     }
 }
