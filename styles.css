@@ -91,9 +91,36 @@ body {
 }
 
 /* Hamburger Menu Styles */
+.navbar-toggler {
+    background: transparent; /* Remove background */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* Pointer cursor for clickable area */
+}
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat; /* Ensure icon does not repeat */
+    background-size: contain; /* Ensure icon scales properly */
+    width: 24px; /* Set width */
+    height: 24px; /* Set height */
 }
+
+/* Hide the default focus outline */
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/* Optionally, ensure there's no change on hover or active states */
+.navbar-toggler:hover,
+.navbar-toggler:active {
+    background: transparent; /* Ensure background remains transparent */
+    box-shadow: none; /* Remove any default shadow */
+}
+
 
 /* Mobile Navigation Styles */
 .navbar-nav {
