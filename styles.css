@@ -16,6 +16,7 @@ body {
     justify-content: space-between; /* Space between logo and other elements */
     width: 100%;
     z-index: 1000; /* Ensure it appears above other content */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 /* Header Logo Styles */
@@ -29,6 +30,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
     align-items: center;
+    justify-content: space-between; /* Space between elements */
 }
 
 .nav-buttons {
@@ -76,7 +78,7 @@ body {
 
 .header-top-icons .header-icon-img {
     width: 32px;
-    height: 20px;
+    height: 18px;
 }
 
 /* Hamburger Menu Styles */
