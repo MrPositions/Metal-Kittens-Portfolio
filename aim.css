@@ -168,6 +168,14 @@ main {
     color: #f0f0f0; /* Social icon hover color */
 }
 
+/* Horizontal Alignment for Social Icons */
+.social-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust space between icons */
+    margin-top: 20px; /* Space above the icons */
+}
+
 /* Mobile Styles */
 @media (max-width: 767px) {
     .header-logo img {
