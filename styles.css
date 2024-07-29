@@ -38,13 +38,6 @@ body {
     margin-right: 30px; /* Space between the navigation and icons */
 }
 
-/* Hide default nav links on mobile */
-@media (max-width: 767px) {
-    .header-nav {
-        display: none; /* Hide default navigation links on mobile */
-    }
-}
-
 .nav-buttons {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
@@ -193,15 +186,11 @@ main {
     }
 
     .header-nav {
-        display: none; /* Hide default navigation links */
+        display: none; /* Hide default navigation links on mobile */
     }
 
     .nav-buttons {
-        display: flex;
-        flex-direction: column; /* Stack navigation links vertically */
-        gap: 10px; /* Space between navigation links */
-        margin: 0; /* Remove margin */
-        padding: 0; /* Remove padding */
+        display: none; /* Hide navigation buttons on mobile */
     }
 
     .header-top-icons {
@@ -249,6 +238,7 @@ main {
         display: block; /* Show hamburger menu when active */
     }
 
+    /* Mobile navigation menu styles */
     .mobile-nav {
         display: none; /* Hide mobile navigation by default */
         flex-direction: column;
