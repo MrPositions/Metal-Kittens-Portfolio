@@ -33,12 +33,14 @@ body {
     justify-content: space-between; /* Space between elements */
 }
 
+/* Navigation Buttons */
 .nav-buttons {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
     gap: 10px; /* Adjust spacing between nav buttons */
 }
 
+/* Header Nav Links */
 .header-nav .nav-link {
     color: #fff;
     text-decoration: none;
@@ -48,6 +50,7 @@ body {
     transition: color 0.3s; /* Transition for text color */
 }
 
+/* Navigation Underline */
 .header-nav .nav-link::after {
     content: '';
     position: absolute;
@@ -149,5 +152,20 @@ body {
 
     .navbar-toggler {
         margin-bottom: 10px;
+    }
+
+    .logo-text img {
+        max-width: 100%; /* Ensure logo fits within the container */
+    }
+
+    .button-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of buttons */
+        justify-content: center;
+        gap: 10px; /* Spacing between buttons */
+    }
+
+    .social-buttons {
+        margin-top: 10px; /* Reduce margin for mobile */
     }
 }
