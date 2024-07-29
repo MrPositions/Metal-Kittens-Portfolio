@@ -91,16 +91,6 @@ body {
 }
 
 /* Hamburger Menu Styles */
-.navbar-toggler {
-    border: none; /* Remove default border */
-    outline: none; /* Remove default outline */
-    background: transparent; /* Ensure background is transparent */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer; /* Pointer cursor for clickable area */
-}
-
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'/%3e%3c/svg%3e");
 }
