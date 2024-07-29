@@ -38,6 +38,13 @@ body {
     margin-right: 30px; /* Space between the navigation and icons */
 }
 
+/* Hide default nav links on mobile */
+@media (max-width: 767px) {
+    .header-nav {
+        display: none; /* Hide default navigation links on mobile */
+    }
+}
+
 .nav-buttons {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
@@ -235,6 +242,7 @@ main {
         position: absolute;
         top: 15px;
         right: 15px;
+        z-index: 1001; /* Ensure it appears above other content */
     }
 
     .hamburger-menu.active {
