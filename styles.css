@@ -12,7 +12,7 @@ body {
     color: #fff;
     padding: 15px 30px; /* Adjust padding for header */
     display: flex;
-    align-items: center;
+    align-items: center; /* Center vertically */
     justify-content: space-between; /* Space between logo and other elements */
     width: 100%;
     z-index: 1000; /* Ensure it appears above other content */
@@ -20,6 +20,10 @@ body {
 }
 
 /* Header Logo Styles */
+.header-logo {
+    flex: 1;
+}
+
 .header-logo img {
     height: 120px; /* Adjust size for smaller screens */
     max-width: 100%; /* Ensure logo doesn't overflow */
@@ -48,6 +52,7 @@ body {
     padding: 12px; /* Increased padding */
     position: relative; /* For underline positioning */
     transition: color 0.3s; /* Transition for text color */
+    margin-right: 15px; /* Slightly move links towards the right on desktop */
 }
 
 /* Navigation Underline */
@@ -71,6 +76,7 @@ body {
 .header-top-icons {
     display: flex;
     gap: 10px; /* Space between icons */
+    margin-left: auto; /* Move icons to the right */
 }
 
 .header-top-icons .header-icon {
@@ -102,7 +108,7 @@ body {
 .social-buttons {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: center; /* Center social icons horizontally */
     margin-top: 20px;
 }
 
@@ -139,7 +145,7 @@ body {
 @media (max-width: 767px) {
     .header-content {
         flex-direction: column; /* Stack elements vertically on mobile */
-        align-items: flex-start; /* Align items to the left */
+        align-items: center; /* Center items horizontally */
     }
 
     .header-logo img {
@@ -161,8 +167,8 @@ body {
 
     .button-container {
         display: flex;
-        flex-wrap: wrap; /* Allow wrapping of buttons */
-        justify-content: center;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons horizontally */
         gap: 10px; /* Spacing between buttons */
     }
 
