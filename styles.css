@@ -86,7 +86,7 @@ body {
 
 .header-top-icons .header-icon-img {
     width: 32px; /* Adjust size for image icons */
-    height: 18px; /* Adjust size for image icons */
+    height: 32px; /* Adjust size for image icons */
     transition: opacity 0.3s; /* Transition for image opacity */
 }
 
@@ -209,7 +209,7 @@ main {
 
     .header-top-icons .header-icon-img {
         width: 32px; /* Adjust size for mobile */
-        height: 18px; /* Adjust size for mobile */
+        height: 32px; /* Adjust size for mobile */
     }
 
     .button-container {
@@ -228,7 +228,7 @@ main {
 
     /* Hamburger Menu Styles */
     .hamburger-menu {
-        display: none; /* Hide hamburger menu by default */
+        display: block; /* Show hamburger menu on mobile */
         font-size: 24px;
         color: #fff;
         cursor: pointer;
@@ -266,5 +266,15 @@ main {
 
     .mobile-nav a:hover {
         background-color: #333; /* Background color on hover */
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none; /* Hide hamburger menu on larger screens */
+    }
+
+    .mobile-nav {
+        display: none; /* Hide mobile navigation on larger screens */
     }
 }
