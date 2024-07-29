@@ -94,6 +94,28 @@ body {
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Custom styles to ensure hamburger icon visibility */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.navbar-toggler-icon::before {
+    content: "\f0c9"; /* Font Awesome icon for hamburger menu */
+    font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is used */
+    font-weight: 900;
+    font-size: 1.5em;
+    color: #fff; /* Set color to white */
+}
+
 /* Mobile Menu Styles */
 .navbar-toggler {
     border: none;
