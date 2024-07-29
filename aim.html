@@ -1,129 +1,139 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Metal Kittens</title>
-        <!-- Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Google Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="aim.css">
-    </head>
-    <body>
-        <header>
-            <div class="header-content d-flex align-items-center">
-                <div class="header-logo">
-                    <img src="images/Kittenlogo5.png" alt="Top Left Logo">
-                </div>
-                <nav class="header-nav d-flex align-items-center">
-                    <div class="nav-buttons d-none d-lg-flex">
-                        <a href="home.html" class="nav-link">Home</a>
-                        <a href="projects.html" class="nav-link">Projects</a>
-                        <a href="deals.html" class="nav-link">Deals</a>
-                        <a href="support.html" class="nav-link">Support</a>
-                        <a href="contact.html" class="nav-link">Contact</a>
-                        <a href="aim.html" class="nav-link">Mission</a>
-                    </div>
-                    <!-- Hamburger Menu Button -->
-                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <!-- Mobile Navigation Menu -->
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="home.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="projects.html">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="deals.html">Deals</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="support.html">Support</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aim.html">Mission</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                <div class="header-top-icons d-none d-lg-flex">
-                    <a href="mailto:example@example.com" class="header-icon">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://fiverr.com/example" class="header-icon">
-                        <img src="images/Fiverr1.png" alt="Fiverr" class="header-icon-img">
-                    </a>
-                    <a href="https://upwork.com/example" class="header-icon">
-                        <img src="images/Upwork1.png" alt="Upwork" class="header-icon-img">
-                    </a>
-                    <a href="https://youtube.com/example" class="header-icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://instagram.com/example" class="header-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/example" class="header-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Kittens</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="aim.css">
+    <style>
+        /* Custom styles to ensure hamburger icon visibility */
+        .navbar-toggler-icon {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/sprites/solid.svg');
+            background-size: 1.5em 1.5em;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content d-flex align-items-center">
+            <div class="header-logo">
+                <img src="images/Kittenlogo5.png" alt="Top Left Logo">
             </div>
-        </header>
-        <main>
-            <div class="container text-center">
-                <!-- Heading and Paragraph -->
-                <div class="aim-section">
-                    <h1 class="aim-heading">OUR AIM</h1>
-                    <p class="aim-paragraph">
-                        The Metal Kittens are a dedicated team of amateur software developers committed to delivering exceptional customer satisfaction. Our goal is to develop high-quality applications and websites tailored to meet the specific needs and expectations of each client. We strive to handle every project with professionalism, continually improving both our business and our team.
-                    </p>
+            <nav class="header-nav d-flex align-items-center">
+                <!-- Desktop Navigation Menu -->
+                <div class="nav-buttons d-none d-lg-flex">
+                    <a href="home.html" class="nav-link">Home</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="deals.html" class="nav-link">Deals</a>
+                    <a href="support.html" class="nav-link">Support</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="aim.html" class="nav-link">Mission</a>
                 </div>
-                <!-- Social Buttons -->
-                <div class="social-buttons">
-                    <a href="mailto:example@example.com" class="social-icon">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://fiverr.com/example" class="social-icon">
-                        <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
-                    </a>
-                    <a href="https://upwork.com/example" class="social-icon">
-                        <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
-                    </a>
-                    <a href="https://youtube.com/example" class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://instagram.com/example" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/example" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
+                <!-- Hamburger Menu Button -->
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Mobile Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="deals.html">Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aim.html">Mission</a>
+                        </li>
+                    </ul>
                 </div>
+            </nav>
+            <div class="header-top-icons d-none d-lg-flex">
+                <a href="mailto:example@example.com" class="header-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://fiverr.com/example" class="header-icon">
+                    <img src="images/Fiverr1.png" alt="Fiverr" class="header-icon-img">
+                </a>
+                <a href="https://upwork.com/example" class="header-icon">
+                    <img src="images/Upwork1.png" alt="Upwork" class="header-icon-img">
+                </a>
+                <a href="https://youtube.com/example" class="header-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com/example" class="header-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/example" class="header-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
-        </main>
-        <!-- Bootstrap JS and dependencies -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!-- Custom JS for setting active nav link -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                const currentPage = window.location.pathname.split("/").pop();
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.classList.add('active');
-                    }
-                });
+        </div>
+    </header>
+    <main>
+        <div class="container text-center">
+            <!-- Heading and Paragraph -->
+            <div class="aim-section">
+                <h1 class="aim-heading">OUR AIM</h1>
+                <p class="aim-paragraph">
+                    The Metal Kittens are a dedicated team of amateur software developers committed to delivering exceptional customer satisfaction. Our goal is to develop high-quality applications and websites tailored to meet the specific needs and expectations of each client. We strive to handle every project with professionalism, continually improving both our business and our team.
+                </p>
+            </div>
+            <!-- Social Buttons -->
+            <div class="social-buttons">
+                <a href="mailto:example@example.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://fiverr.com/example" class="social-icon">
+                    <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
+                </a>
+                <a href="https://upwork.com/example" class="social-icon">
+                    <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
+                </a>
+                <a href="https://youtube.com/example" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://instagram.com/example" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/example" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS for setting active nav link -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
             });
-        </script>
-    </body>
-    </html>
+        });
+    </script>
+</body>
+</html>
