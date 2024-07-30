@@ -14,51 +14,43 @@
     <link href="styles.css" rel="stylesheet">
     <style>
         /* Aim Section Styles */
-    .aim-section {
-    margin-top: 20px;
-    text-align: center; /* Center the heading and paragraph */
-    }
+        #aim {
+            background-color: #1c1c1c; /* Background color */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
 
-    /* Aim Heading Styles */
-    .aim-heading {
-    font-family: 'Julius Sans One', sans-serif; /* Use Julius Sans One font */
-    font-size: 36px; /* Size of the heading */
-    color: #fff; /* Heading color */
-    border-bottom: 2px solid #fff; /* Underline for the heading */
-    display: inline-block; /* To keep the underline width consistent */
-    padding-bottom: 10px; /* Space between heading text and underline */
-    margin-bottom: 20px; /* Space below the heading */
-    }
+        #aim h2 {
+            color: #fff; /* White color for the heading */
+            font-size: 2.5em; /* Larger font size */
+            margin-bottom: 20px;
+        }
 
-    /* Aim Paragraph Styles */
-    .aim-paragraph {
-    color: #ccc; /* Light gray color for the paragraph */
-    font-size: 18px; /* Size of the paragraph text */
-    line-height: 1.6; /* Line height for better readability */
-    max-width: 800px; /* Maximum width for the paragraph */
-    margin: 0 auto; /* Center the paragraph */
-    }
-    /* Aim Section Adjustments for Mobile */
-    .aim-section {
-        margin-top: 10px; /* Reduce margin on mobile */
-    }
+        #aim p {
+            color: #ddd; /* Light gray text color */
+            font-size: 1.2em; /* Slightly larger font size */
+            margin-bottom: 30px;
+        }
 
-    .aim-heading {
-        font-size: 28px; /* Smaller heading size for mobile */
-    }
+        /* Mobile Aim Section Styles */
+        @media (max-width: 767px) {
+            #aim h2 {
+                font-size: 1.5em; /* Adjusted heading size for mobile */
+            }
 
-    .aim-paragraph {
-        font-size: 16px; /* Smaller font size for mobile */
-    }
-}
+            #aim p {
+                font-size: 1em; /* Adjusted font size for mobile */
+                margin: 0 15px; /* Added margin for better readability on mobile */
+            }
+        }
     </style>
-
 </head>
 <body>
     <header>
         <div class="header-content d-flex align-items-center">
             <div class="header-logo">
-                <img src="images/Kittenlogo5.png" alt="Top Left Logo">
+                <img src="images/KittensLogo2.png" alt="Top Left Logo">
             </div>
             <nav class="header-nav d-flex align-items-center">
                 <!-- Desktop Navigation Menu -->
@@ -121,35 +113,34 @@
         </div>
     </header>
     <main>
-        <div class="container text-center">
-            <!-- Heading and Paragraph -->
-            <div class="aim-section">
-                <h1 class="aim-heading">OUR AIM</h1>
-                <p class="aim-paragraph">
-                    The Metal Kittens are a dedicated team of amateur software developers committed to delivering exceptional customer satisfaction. Our goal is to develop high-quality applications and websites tailored to meet the specific needs and expectations of each client. We strive to handle every project with professionalism, continually improving both our business and our team.
-                </p>
-            </div>
-            <!-- Social Buttons -->
-            <div class="social-buttons">
-                <a href="mailto:example@example.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://fiverr.com/example" class="social-icon">
-                    <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
-                </a>
-                <a href="https://upwork.com/example" class="social-icon">
-                    <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
-                </a>
-                <a href="https://youtube.com/example" class="social-icon">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://instagram.com/example" class="social-icon">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://twitter.com/example" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </div>
+        <!-- Our Aim Section -->
+        <section id="aim">
+            <h2>Our Aim</h2>
+            <p>
+                The Metal Kittens are a dedicated team of amateur software developers committed to delivering exceptional customer satisfaction. Our goal is to develop high-quality applications and websites tailored to meet the specific needs and expectations of each client. We strive to handle every project with professionalism, continually improving both our business and our team.
+            </p>
+        </section>
+
+        <!-- Social Buttons -->
+        <div class="social-buttons mt-4">
+            <a href="mailto:example@example.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://fiverr.com/example" class="social-icon">
+                <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
+            </a>
+            <a href="https://upwork.com/example" class="social-icon">
+                <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
+            </a>
+            <a href="https://youtube.com/example" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://instagram.com/example" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/example" class="social-icon">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
     </main>
     <!-- Bootstrap JS and dependencies -->

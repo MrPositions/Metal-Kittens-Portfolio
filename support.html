@@ -11,13 +11,52 @@
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional Styles */
+        #support-us {
+            background-color: #1c1c1c; /* Background color */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #support-us h2 {
+            color: #fff; /* White color for the heading */
+            font-size: 2.5em; /* Larger font size */
+            margin-bottom: 20px;
+        }
+
+        #support-us p {
+            color: #ddd; /* Light gray text color */
+            font-size: 1.2em; /* Slightly larger font size */
+            margin-bottom: 30px;
+        }
+
+        #support-us .btn-support {
+            background-color: #C0C0C0; /* Gold background color */
+            color: #000; /* Black text color */
+            border: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        #support-us .btn-support i {
+            margin-right: 10px;
+        }
+
+        #support-us .btn-support:hover {
+            background-color: #e2e6ea; /* Slightly lighter gold on hover */
+            color: #000;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content d-flex align-items-center">
             <div class="header-logo">
-                <img src="images/Kittenlogo5.png" alt="Top Left Logo">
+                <img src="images/KittensLogo2.png" alt="Top Left Logo">
             </div>
             <nav class="header-nav d-flex align-items-center">
                 <div class="nav-buttons d-none d-lg-flex">
@@ -79,9 +118,17 @@
         </div>
     </header>
     <main>
-        <!-- Main content area without buttons -->
+        <!-- Support Us Section -->
+        <div class="container" id="support-us">
+            <h2>Support Us</h2>
+            <p>If you value our work and wish to support our continued success, please consider making a donation through our Buy Me a Coffee page. Donors will receive the added benefit of having their requests prioritized and addressed with the utmost urgency.</p>
+            <a href="https://www.buymeacoffee.com/yourusername" class="btn btn-support">
+                <i class="fas fa-coffee"></i> Buy Me a Coffee
+            </a>
+        </div>
+
+        <!-- Social Buttons -->
         <div class="container text-center">
-            <!-- Social Buttons -->
             <div class="social-buttons">
                 <a href="mailto:example@example.com" class="social-icon">
                     <i class="fas fa-envelope"></i>
