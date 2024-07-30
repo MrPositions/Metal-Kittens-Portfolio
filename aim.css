@@ -148,31 +148,6 @@ main {
     padding: 20px;
 }
 
-/* Aim Section Styles */
-.aim-section {
-    margin-top: 20px;
-    text-align: center; /* Center the heading and paragraph */
-}
-
-/* Aim Heading Styles */
-.aim-heading {
-    font-family: 'Julius Sans One', sans-serif; /* Use Julius Sans One font */
-    font-size: 36px; /* Size of the heading */
-    color: #fff; /* Heading color */
-    border-bottom: 2px solid #fff; /* Underline for the heading */
-    display: inline-block; /* To keep the underline width consistent */
-    padding-bottom: 10px; /* Space between heading text and underline */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Aim Paragraph Styles */
-.aim-paragraph {
-    color: #ccc; /* Light gray color for the paragraph */
-    font-size: 18px; /* Size of the paragraph text */
-    line-height: 1.6; /* Line height for better readability */
-    max-width: 800px; /* Maximum width for the paragraph */
-    margin: 0 auto; /* Center the paragraph */
-}
 
 /* Social Buttons Styles */
 .social-buttons {
@@ -235,16 +210,4 @@ main {
         font-size: 24px; /* Larger social icon size for mobile */
     }
 
-    /* Aim Section Adjustments for Mobile */
-    .aim-section {
-        margin-top: 10px; /* Reduce margin on mobile */
-    }
 
-    .aim-heading {
-        font-size: 28px; /* Smaller heading size for mobile */
-    }
-
-    .aim-paragraph {
-        font-size: 16px; /* Smaller font size for mobile */
-    }
-}

@@ -11,7 +11,76 @@
     <!-- Google Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        /* Contact Section Styles */
+        #contact {
+            padding: 32px 0; /* Adjust padding for better fit */
+            color: #fff;
+            background-color: #1c1c1c;
+            text-align: center;
+        }
+
+        #contact h2 {
+            color: #fff;
+            font-size: 1.8em; /* Adjust font size for mobile */
+            margin-bottom: 15px; /* Adjust margin */
+        }
+
+        #contact hr {
+            width: 100px; /* Adjust width for mobile */
+            border-top: 2px solid #fff;
+            margin: 10px auto; /* Adjust margin */
+        }
+
+        #contact .w3-section p {
+            color: #ddd;
+            font-size: 1em; /* Adjust font size for mobile */
+            margin-bottom: 10px; /* Adjust margin */
+        }
+
+        #contact form p {
+            margin-bottom: 10px; /* Adjust margin */
+        }
+
+        #contact .w3-input {
+            width: calc(100% - 32px); /* Adjust width to fit screen */
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px; /* Adjust margin */
+        }
+
+        #contact .w3-button {
+            background-color: #C0C0C0;
+            color: #000;
+            border: none;
+            font-size: 1em; /* Adjust font size for mobile */
+            padding: 8px 15px; /* Adjust padding */
+            border-radius: 5px;
+        }
+
+        #contact .w3-button:hover {
+            background-color: #e2e6ea;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 767px) {
+            #contact h2 {
+                font-size: 1.6em; /* Slightly smaller heading */
+            }
+
+            #contact .w3-input {
+                font-size: 0.9em; /* Smaller input font size */
+                padding: 8px;
+            }
+
+            #contact .w3-button {
+                font-size: 0.9em; /* Smaller button font size */
+                padding: 8px 10px; /* Adjust padding */
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -79,18 +148,37 @@
         </div>
     </header>
     <main>
-        <!-- Main content area without buttons -->
+        <!-- Contact Section -->
+        <div class="container" id="contact">
+            <h2>Contact Info</h2>
+            <hr>
+            <div class="w3-section">
+                <p><i class="fa fa-envelope-open fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Email: metalkittenssoftware@gmail.com</p>
+            </div>
+            <p>Please provide details about your project requirements by sending us a message:</p>
+            <form id="contact-form">
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="name"></p>
+                <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="subject"></p>
+                <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="message"></textarea></p>
+                <p>
+                    <button id="submit-button" class="w3-button w3-light-grey w3-padding-large" type="submit">
+                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+        </div>
+        <!-- Social Buttons -->
         <div class="container text-center">
-            <!-- Social Buttons -->
             <div class="social-buttons">
                 <a href="mailto:example@example.com" class="social-icon">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="social-icon">
-                    <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
+                    <img src="images/Fiverr1.png" alt="Fiverr">
                 </a>
                 <a href="https://upwork.com/example" class="social-icon">
-                    <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
+                    <img src="images/Upwork2.png" alt="Upwork">
                 </a>
                 <a href="https://youtube.com/example" class="social-icon">
                     <i class="fab fa-youtube"></i>
