@@ -90,24 +90,28 @@
             height: 18px;
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            #packages .row {
-                display: flex;
-                flex-direction: column;
-            }
+    /* Responsive styles */
+    @media (max-width: 768px) {
+    #packages .row {
+        display: flex;
+        flex-direction: column;
+    }
 
-            #packages .col-md-6 {
-                margin-bottom: 20px;
-            }
+    #packages .col-md-6 {
+        margin-bottom: 20px;
+        width: 90%; /* 5% smaller on each side */
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-            /* Ensure the social buttons are always horizontal on mobile */
-            .social-buttons {
-                display: flex;
-                justify-content: center;
-                flex-wrap: nowrap;
-            }
-        }
+    /* Ensure the social buttons are always horizontal on mobile */
+    .social-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
     </style>
 </head>
 <body>
