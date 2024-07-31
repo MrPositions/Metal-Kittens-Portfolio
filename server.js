@@ -1,48 +1,76 @@
+const express = require('express');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
+require('dotenv').config();
 
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { name, email, subject, message } = req.body;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-    // Create a transporter object using your email service
-    const transporter = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASS  // Your email password
-      }
-    });
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(cors());
 
-    // Set up email data for sending to yourself
-    const mailOptionsToSelf = {
-      from: email,
-      to: process.env.EMAIL_USER, // Your email address
-      subject: `New message from ${name}: ${subject}`,
-      text: `Message from: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    };
-
-    // Set up email data for auto-reply to the sender
-    const autoReplyOptions = {
-      from: process.env.EMAIL_USER, // Your email address
-      to: email,
-      subject: 'Thank you for your message',
-      text: 'Thank you for taking the time to reach out. Your message has been received, and we will get back to you shortly.'
-    };
-
-    try {
-      // Send email to yourself
-      await transporter.sendMail(mailOptionsToSelf);
-
-      // Send auto-reply to the sender
-      await transporter.sendMail(autoReplyOptions);
-
-      res.status(200).json({ message: 'Emails sent successfully!' });
-    } catch (error) {
-      console.error('Error sending emails:', error);
-      res.status(500).json({ error: 'Failed to send emails' });
-    }
-  } else {
-    res.setHeader('Allow', ['POST']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+// Configure Nodemailer
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER, // Your email address to send from
+    pass: process.env.EMAIL_PASS  // Your email password or app password
   }
-}
+});
+
+// Verify transporter configuration
+transporter.verify((error, success) => {
+  if (error) {
+    console.error('Transporter verification failed:', error);
+  } else {
+    console.log('Transporter is ready to send messages');
+  }
+});
+
+// Handle form submission
+app.post('/send-email', (req, res) => {
+  const { name, email, subject, message } = req.body;
+
+  // Mail options for sending to yourself
+  const mailOptions = {
+    from: email, // Sender's email address
+    to: process.env.EMAIL_USER, // Your email address
+    replyTo: email, // Reply to the sender's email address
+    subject: `New message from ${name}: ${subject}`,
+    text: `Message from: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  };
+
+  // Mail options for auto-reply to the sender
+  const autoReplyOptions = {
+    from: process.env.EMAIL_USER,
+    to: email,
+    subject: 'Thank you for your message',
+    text: 'Thank you for taking the time to review my portfolio and conducting business with me. Your request will be reviewed and responded to shortly.'
+  };
+
+  // Send email to yourself
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email to yourself:', error);
+      return res.status(500).send(error.toString());
+    }
+    console.log('Primary email sent:', info.response);
+
+    // Send auto-reply to the sender
+    transporter.sendMail(autoReplyOptions, (autoReplyError, autoReplyInfo) => {
+      if (autoReplyError) {
+        console.error('Error sending auto-reply:', autoReplyError);
+        return res.status(500).send(autoReplyError.toString());
+      }
+      console.log('Auto-reply sent:', autoReplyInfo.response);
+      res.status(200).send('Emails sent: ' + info.response + ' | Auto-reply sent: ' + autoReplyInfo.response);
+    });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
