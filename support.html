@@ -17,38 +17,75 @@
         #support-us {
             background-color: #1c1c1c; /* Background color */
             color: #fff;
-            padding: 60px 0;
+            padding: 40px 0; /* Reduced padding */
             text-align: center;
         }
 
         #support-us h2 {
             color: #fff; /* White color for the heading */
-            font-size: 2.5em; /* Larger font size */
-            margin-bottom: 20px;
+            font-size: 2.5em; /* Slightly smaller font size for mobile */
+            margin-bottom: 15px; /* Reduced margin */
         }
 
         #support-us p {
             color: #ddd; /* Light gray text color */
-            font-size: 1.2em; /* Slightly larger font size */
-            margin-bottom: 30px;
+            font-size: 1.2em; /* Adjust font size */
+            margin-bottom: 20px; /* Reduced margin */
         }
 
         #support-us .btn-support {
             background-color: #C0C0C0; /* Silver background color */
             color: #000; /* Black text color */
             border: none;
-            font-size: 1.2em;
-            padding: 10px 20px;
+            font-size: 1.2em; /* Adjust font size for mobile */
+            padding: 8px 16px; /* Adjust padding */
             border-radius: 5px;
         }
 
         #support-us .btn-support i {
-            margin-right: 10px;
+            margin-right: 8px; /* Reduced margin */
         }
 
         #support-us .btn-support:hover {
             background-color: #e2e6ea; /* Slightly lighter color on hover */
             color: #000;
+        }
+
+        /* Social Buttons Styles */
+        .social-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center align */
+            margin: 20px 0; /* Margin to separate from other content */
+        }
+
+        .social-icon {
+            margin: 5px; /* Margin between icons */
+        }
+
+        .social-icon img {
+            width: 24px; /* Adjust size for mobile */
+            height: auto;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 767px) {
+            #support-us h2 {
+                font-size: 2.5em; /* Adjusted heading size */
+            }
+
+            #support-us p {
+                font-size: 1.2em; /* Adjusted paragraph size */
+            }
+
+            #support-us .btn-support {
+                font-size: 1.2em; /* Adjusted button font size */
+                padding: 8px 12px; /* Adjusted padding */
+            }
+
+            .social-icon img {
+                width: 24px; /* Adjusted icon size */
+            }
         }
     </style>
 </head>
@@ -134,10 +171,10 @@
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="social-icon">
-                    <img src="images/Fiverr1.png" alt="Fiverr" style="width:32px;height:18px;">
+                    <img src="images/Fiverr1.png" alt="Fiverr">
                 </a>
                 <a href="https://upwork.com/example" class="social-icon">
-                    <img src="images/Upwork2.png" alt="Upwork" style="width:32px;height:18px;">
+                    <img src="images/Upwork2.png" alt="Upwork">
                 </a>
                 <a href="https://youtube.com/example" class="social-icon">
                     <i class="fab fa-youtube"></i>
