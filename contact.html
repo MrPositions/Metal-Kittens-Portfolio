@@ -208,6 +208,60 @@
                 }
             });
         });
+
+  // New script for handling form submission and button feedback
+  document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('contact-form');
+  const submitButton = document.getElementById('submit-button');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      subject: formData.get('subject'),
+      message: formData.get('message')
+    };
+
+    fetch('https://portfolio-4zaw.vercel.app/send-email', { // Update with your actual endpoint
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        console.log(response);
+        const contentType = response.headers.get('content-type');
+        console.log(contentType);
+        if (response.ok) {
+          console.log("made it to ok");
+          return response.text().then(text => {
+            console.log("Response is not JSON:", text);
+            // Update button text and style
+            submitButton.innerHTML = '<i class="fa fa-check"></i> MESSAGE SENT';
+
+            // Reset after 1.5 seconds
+            setTimeout(() => {
+              submitButton.innerHTML = '<i class="fa fa-paper-plane"></i> SEND MESSAGE';
+              form.reset(); // Reset the form fields
+            }, 1500);
+          });
+        } else {
+          return response.text().then(errorData => {
+            throw new Error(`Server responded with error: ${errorData}`);
+          });
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert(`There was an issue sending your message. Please try again. Error: ${error.message}`);
+      });
+  });
+});
+
     </script>
 </body>
 </html>
