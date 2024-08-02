@@ -13,53 +13,60 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Carousel Styles */
-        .carousel-item img {
-            width: 100%;
-            height: 300px; /* Fixed height for all carousel images */
-            object-fit: contain; /* Ensure the full image fits within the fixed dimensions */
-        }
+/* Carousel Styles */
+.carousel-item img {
+    width: 100%;
+    height: 300px; /* Fixed height for all carousel images */
+    object-fit: contain; /* Ensure the full image fits within the fixed dimensions */
+}
 
-        .carousel-caption {
-            bottom: 20px;
-        }
+/* Darker arrows */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #333; /* Darker color for arrows */
+}
 
-        .carousel-caption h3 {
-            font-size: 1.5rem;
-            color: black; /* White color for carousel captions */
-        }
+/* Carousel indicators positioning */
+.carousel-indicators {
+    position: relative;
+    bottom: 20px; /* Adjust as needed to position indicators below the image */
+    margin: 40px auto; /* Increased space between the image and indicators */
+    padding: 0;
+    display: flex; /* Center indicators horizontally */
+    justify-content: center; /* Center indicators horizontally */
+}
 
-        /* Darker arrows */
-        .carousel-control-prev-icon, .carousel-control-next-icon {
-            background-color: #333; /* Darker color for arrows */
-        }
+.carousel-indicators li {
+    background-color: #333; /* Darker color for indicators */
+    margin: 0 5px; /* Space between indicators */
+}
 
-        .carousel-indicators {
-            position: relative;
-            bottom: -30px; /* Adjust as needed */
-        }
+.carousel-indicators .active {
+    background-color: #fff; /* White color for active indicator */
+}
 
-        .carousel-indicators li {
-            background-color: #333; /* Darker color for indicators */
-        }
+/* Projects Section */
+#projects h2 {
+    color: white; /* White color for Projects heading */
+    font-size: 2.5rem;
+    margin-top: 20px; /* Space above the heading */
+}
 
-        .carousel-indicators .active {
-            background-color: #fff; /* White color for active indicator */
-        }
+/* Heading Styling */
+.carousel-headings {
+    color: white;
+    font-size: 1.5rem;
+    margin: 20px 0; /* Space around the headings */
+}
 
-        /* Projects Section */
-        #projects h2 {
-            color: white; /* White color for Projects heading */
-            font-size: 2.5rem;
-            margin-top: 20px; /* Space above the heading */
-        }
+/* Description Styling */
+#project-description {
+    color: #ddd; /* Light gray color for descriptions */
+    margin-top: 20px; /* Space above the description */
+    font-size: 1.2rem; /* Font size for descriptions */
+}
 
-        /* Description Styling */
-        #project-description {
-            color: #ddd; /* Light gray color for descriptions */
-            margin-top: 50px; /* Space above the description */
-            font-size: 1.2rem; /* Font size for descriptions */
-        }
+
+
 
         /* Social Buttons Styling */
 
@@ -120,7 +127,7 @@
                 </div>
             </nav>
             <div class="header-top-icons d-none d-lg-flex">
-                <a href="mailto:example@example.com" class="header-icon">
+                <a href="https://mrpositions.github.io/Metal-Kittens-Portfolio/contact.html" class="header-icon">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="header-icon">
@@ -142,94 +149,71 @@
         </div>
     </header>
     <main>
-        <div class="container text-center">
-            <!-- Projects Section -->
-            <div class="w3-padding-64 w3-content" id="projects">
-                <h2 class="w3-text-light-grey">Projects</h2>
-                <hr style="width: 200px" class="w3-opacity">
-                <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-description="An advanced Discord application that functions as an on-demand dictionary and translation tool, providing users with instant definitions and translations across a wide range of languages.">
-                            <a href="https://github.com/Enfinities/Vocab_bot">
-                                <img src="images/Bookie.png" class="d-block w-100" alt="Bookie">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Bookie</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A highly advanced Discord bot equipped with GPT-3.5 capabilities, featuring an exceptionally engaging and charismatic personality to offer users a uniquely enriched conversational experience.">
-                            <a href="https://mrpositions.github.io/SiteToBehold/">
-                                <img src="images/SiteToBehold2.png" class="d-block w-100" alt="Site To Behold">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Genjutchu</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A sophisticated webcomic platform featuring an ensemble of intriguing characters whose journeys and challenges are deeply influenced by The Secret History by Donna Tartt.">
-                            <a href="https://mrpositions.github.io/Webcomic_Layout/index.html">
-                                <img src="images/RFighter.png" class="d-block w-100" alt="Webcomic">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Webcomic</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A robust Discord application that enables users to seamlessly schedule, report, and track their workout routines, enhancing their fitness management experience.">
-                            <a href="https://github.com/Enfinities/Workout-bot">
-                                <img src="images/Workout.png" class="d-block w-100" alt="Workout">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Workout</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A comprehensive Discord application designed to track and reward users for solving LeetCode problems over time, transforming the learning process into an engaging and gamified experience.">
-                            <a href="https://github.com/Enfinities/Starlight">
-                                <img src="images/Starlight.png" class="d-block w-100" alt="Starlight">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Starlight</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A versatile Discord application that streamlines the scheduling and management of group activities, enabling users to set, track, and evaluate the duration and progress of each planned event.">
-                            <a href="https://github.com/jamangi/progress_measurer">
-                                <img src="images/ProgressMeasurer.png" class="d-block w-100" alt="Progress Measurer">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Webby</h3>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-description="A versatile Discord application that streamlines the scheduling and management of group activities, enabling users to set, track, and evaluate the duration and success of their events effortlessly.">
-                            <a href="https://mrpositions.github.io/SiteToBehold/">
-                                <img src="images/Alarm.png" class="d-block w-100" alt="Chronos">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3>Alarm</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
+     <div class="container text-center">
+    <!-- Projects Section -->
+    <div class="w3-padding-64 w3-content" id="projects">
+        <h2 class="w3-text-light-grey">Projects</h2>
+        <hr style="width: 200px" class="w3-opacity">
+        <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-index="0" data-description="An advanced Discord application that functions as an on-demand dictionary and translation tool, providing users with instant definitions and translations across a wide range of languages." data-heading="Bookie">
+                    <a href="https://github.com/Enfinities/Vocab_bot">
+                        <img src="images/Bookie.png" class="d-block w-100" alt="Bookie">
                     </a>
-                    <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                    <ol class="carousel-indicators">
-                        <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="1"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="2"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="3"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="4"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="5"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="6"></li>
-                        <li data-target="#projectsCarousel" data-slide-to="7"></li>
-                    </ol>
                 </div>
-                <p id="project-description"></p>
+                <div class="carousel-item" data-index="1" data-description="A sophisticated webcomic platform featuring an ensemble of intriguing characters whose journeys and challenges are deeply influenced by The Secret History by Donna Tartt." data-heading="Webcomic">
+                    <a href="https://mrpositions.github.io/Webcomic_Layout/index.html">
+                        <img src="images/RFighter.png" class="d-block w-100" alt="Webcomic">
+                    </a>
+                </div>
+                <div class="carousel-item" data-index="2" data-description="A robust Discord application that enables users to seamlessly schedule, report, and track their workout routines, enhancing their fitness management experience." data-heading="Workout">
+                    <a href="https://github.com/Enfinities/Workout-bot">
+                        <img src="images/Workout.png" class="d-block w-100" alt="Workout">
+                    </a>
+                </div>
+                <div class="carousel-item" data-index="3" data-description="A comprehensive Discord application designed to track and reward users for solving LeetCode problems over time, transforming the learning process into an engaging and gamified experience." data-heading="Starlight">
+                    <a href="https://github.com/Enfinities/Starlight">
+                        <img src="images/Starlight.png" class="d-block w-100" alt="Starlight">
+                    </a>
+                </div>
+                <div class="carousel-item" data-index="4" data-description="A versatile Discord application that streamlines the scheduling and management of group activities, enabling users to set, track, and evaluate the duration and progress of each planned event." data-heading="Webby">
+                    <a href="https://github.com/jamangi/progress_measurer">
+                        <img src="images/ProgressMeasurer.png" class="d-block w-100" alt="Progress Measurer">
+                    </a>
+                </div>
+                <div class="carousel-item" data-index="5" data-description="A versatile Discord application that streamlines the scheduling and management of group activities, enabling users to set, track, and evaluate the duration and success of their events effortlessly." data-heading="Alarm">
+                    <a href="https://https://github.com/MrPositions/Alarm">
+                        <img src="images/Alarm.png" class="d-block w-100" alt="Alarm">
+                    </a>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <ol class="carousel-indicators">
+            <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#projectsCarousel" data-slide-to="1"></li>
+            <li data-target="#projectsCarousel" data-slide-to="2"></li>
+            <li data-target="#projectsCarousel" data-slide-to="3"></li>
+            <li data-target="#projectsCarousel" data-slide-to="4"></li>
+            <li data-target="#projectsCarousel" data-slide-to="5"></li>
+        </ol>
+        <div id="carousel-headings" class="carousel-headings"></div>
+        <p id="project-description"></p>
+    </div>
+</div>
+
+
+
             <!-- Social Buttons -->
             <div class="social-buttons">
-                <a href="mailto:example@example.com" class="social-icon">
+                <a href="https://mrpositions.github.io/Metal-Kittens-Portfolio/contact.html" class="social-icon">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="https://fiverr.com/example" class="header-icon">
@@ -254,21 +238,40 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // JavaScript to update description on carousel item change
-        $('#projectsCarousel').on('slide.bs.carousel', function (e) {
-            var nextItem = $(e.relatedTarget);
-            var description = nextItem.data('description');
-            $('#project-description').text(description);
-        });
+    // Custom JS
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselElement = document.getElementById('projectsCarousel');
+        const headingElement = document.getElementById('carousel-headings');
+        const descriptionElement = document.getElementById('project-description');
+        const indicators = document.querySelectorAll('.carousel-indicators li');
 
-        // Initialize the first description
-        $(document).ready(function () {
-            var firstItem = $('#projectsCarousel .carousel-item.active');
-            var firstDescription = firstItem.data('description');
-            $('#project-description').text(firstDescription);
-        });
-    </script>
+        function updateCarouselInfo() {
+            const activeItem = document.querySelector('#projectsCarousel .carousel-item.active');
+            const index = activeItem.getAttribute('data-index');
+            const heading = activeItem.getAttribute('data-heading');
+            const description = activeItem.getAttribute('data-description');
+
+            headingElement.textContent = heading;
+            descriptionElement.textContent = description;
+
+            // Update active indicator
+            indicators.forEach((indicator, i) => {
+                if (i == index) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize the carousel info
+        updateCarouselInfo();
+
+        // Update carousel info when the carousel slides
+        $(carouselElement).on('slid.bs.carousel', updateCarouselInfo);
+    });
+</script>
+
 </body>
 </html>
