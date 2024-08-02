@@ -75,7 +75,7 @@ body {
 /* Header Top Icons Styles */
 .header-top-icons {
     display: flex;
-    gap: 10px; /* Space between icons */
+    gap: 15px; /* Space between icons */
     margin-left: auto; /* Move icons to the right */
 }
 
@@ -105,8 +105,8 @@ body {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'/%3e%3c/svg%3e");
     background-repeat: no-repeat; /* Ensure icon does not repeat */
     background-size: contain; /* Ensure icon scales properly */
-    width: 24px; /* Set width */
-    height: 24px; /* Set height */
+    width: 26px; /* Set width */
+    height: 28px; /* Set height */
 }
 
 /* Hide the default focus outline */
@@ -134,7 +134,7 @@ body {
 /* Social Icons Styles */
 .social-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center; /* Center social icons horizontally */
     margin-top: 20px;
 }
