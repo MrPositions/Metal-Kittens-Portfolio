@@ -72,24 +72,6 @@ body {
     width: 100%; /* Underline width on hover and active */
 }
 
-/* Header Top Icons Styles */
-.header-top-icons {
-    display: flex;
-    gap: 15px; /* Space between icons */
-    margin-left: auto; /* Move icons to the right */
-}
-
-.header-top-icons .header-icon {
-    color: #fff;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.header-top-icons .header-icon-img {
-    width: 32px;
-    height: 18px;
-}
-
 /* Hamburger Menu Styles */
 .navbar-toggler {
     background: transparent; /* Remove background */
@@ -102,7 +84,7 @@ body {
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'fill='%23c0c0c0'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M3 6h18v2H3zm0 4h18v2H3zm0 4h18v2H3z'/%3e%3c/svg%3e");
     background-repeat: no-repeat; /* Ensure icon does not repeat */
     background-size: contain; /* Ensure icon scales properly */
     width: 26px; /* Set width */
