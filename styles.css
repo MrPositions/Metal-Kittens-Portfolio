@@ -123,6 +123,24 @@ body {
     margin-top: 20px;
 }
 
+/* Font Awesome Icons */
+.header-top-icons {
+    display: flex; /* Ensure header-top-icons are displayed as flex */
+    gap: 15px; /* Gap between icons in the header */
+}
+
+.header-top-icons .fas,
+.header-top-icons .fab {
+    color: #fff; /* Set color for Font Awesome icons */
+    font-size: 24px; /* Adjust font size if needed */
+}
+
+/* Ensure consistency for social icon styling */
+.header-top-icons .header-icon,
+.social-buttons .social-icon {
+    color: #fff;
+    text-decoration: none;
+}
 .social-buttons .social-icon {
     color: #fff;
     font-size: 24px;
@@ -203,3 +221,8 @@ body {
         font-size: 16px; /* Adjust font size for better readability */
     }
 }
+
+
+
+
+
