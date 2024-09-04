@@ -22,7 +22,7 @@ const sendEmail = (req, res) => {
     from: 'your-email@gmail.com',
     to: email,
     subject: 'Thank you for your message',
-    text: 'Thank you for taking the time to review my portfolio and conducting business with me. Your request will be reviewed and responded to shortly.'
+    text: 'Thank you for contacting us. Your message has been received. It will be reviewed and responded to promptly.'
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
